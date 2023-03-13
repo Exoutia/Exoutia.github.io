@@ -439,6 +439,10 @@ section {
   line-height: 0;
 }
 
+.about .img-fluid {
+  border-radius: 50%;
+}
+
 .about .content p:last-child {
   margin-bottom: 0;
 }
