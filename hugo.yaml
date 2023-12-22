@@ -29,11 +29,11 @@ Menus:
       title: Blog posts
       url: /blogs
       weight: 1
-    # - identifier: gallery
-    #   name: Gallery
-    #   title: Blog posts
-    #   url: /gallery
-    #   weight: 2
+    - identifier: gallery
+      name: Gallery
+      title: Blog posts
+      url: /gallery
+      weight: 2
     #Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
@@ -85,7 +85,7 @@ params:
     textAlign: left # default: left
 
   # color preference
-  color:
+  # color:
   #   textColor:
   #   secondaryTextColor:
   #   backgroundColor:
@@ -93,13 +93,13 @@ params:
   #   primaryColor:
   #   secondaryColor:
 
-    darkmode:
-      textColor: "#cdd6f4"
-      secondaryTextColor: "#bac2de"
-      backgroundColor: "#1e1e2e"
-      secondaryBackgroundColor: "#313244"
-      primaryColor: "#f5e0dc"
-      secondaryColor: "#313244"
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
 
   # If you want to customize the menu, you can change it here
   navbar:
@@ -111,7 +111,7 @@ params:
     # searchPlaceholder: "Search"
     stickyNavBar:
       enable : true
-      showOnScrollUp : false
+      showOnScrollUp : true
     menus:
       disableAbout: false
       disableExperience: false
