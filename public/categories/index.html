@@ -31,7 +31,7 @@
 <meta property="og:title" content="Categories" />
 <meta property="og:description" content="This is my portfolio and blog website." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/categories/" /><meta property="og:site_name" content="Exoutia" />
+<meta property="og:url" content="https://Exoutia.github.io/categories/" /><meta property="og:site_name" content="Exoutia" />
 
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Categories"/>
@@ -57,12 +57,12 @@
         --secondary-color: #f8f9fa;
 
          
-        --text-color-dark: #e4e6eb;
-        --text-secondary-color-dark: #b0b3b8;
-        --background-color-dark: #18191a;
-        --secondary-background-color-dark: #212529;
-        --primary-color-dark: #ffffff;
-        --secondary-color-dark: #212529;
+        --text-color-dark: #cdd6f4;
+        --text-secondary-color-dark: #bac2de;
+        --background-color-dark: #1e1e2e;
+        --secondary-background-color-dark: #313244;
+        --primary-color-dark: #f5e0dc;
+        --secondary-color-dark: #313244;
     }
     body {
         font-size: 1rem;
@@ -139,7 +139,7 @@ Categories | Bibek Jha
         let profileHeaderElem = document.getElementById("profileHeader");
         let currentScrollPos = window.pageYOffset;
         let resetHeaderStyle = false;
-        let showNavBarOnScrollUp =  true ;
+        let showNavBarOnScrollUp =  false ;
         let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
         if (showNavBar) {
             profileHeaderElem.classList.add("showHeaderOnTop");
@@ -261,16 +261,6 @@ Categories | Bibek Jha
                     </li>
                     
                     
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/gallery" title="Blog posts">
-                            
-                            Gallery
-                        </a>
-                    </li>
-                    
-                    
 
                     
                     <li class="nav-item navbar-text">
@@ -376,29 +366,25 @@ Categories | Bibek Jha
 
     
 </div><div class="container py-4">
-    <div class="row justify-content-center">
-        <div class="col-md-4 text-center">
-            <div class="pb-2">
-                <a href="" title="Bibek Jha">
-                    <img alt="Footer logo" src="/favicon.ico"
-                        height="40px" width="40px">
-                </a>
-            </div>
-            &copy; 2023  All rights reserved
-            <div class="text-secondary">
-                Made with
-                <span class="text-danger">
-                    &#10084;
-                </span>
-                and
-                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
-                    title="Designed and developed by gurusabarish">
-                    Hugo Profile
-                </a>
-            </div>
-        </div>
+  <div class="row justify-content-center">
+    <div class="col-md-4 text-center">
+      <div class="pb-2">
+        <a href="https://Exoutia.github.io" title="Bibek Jha">
+          <img alt="Footer logo" src="/favicon.ico" height="40px"
+            width="40px" />
+        </a>
+      </div>
+      &copy; 2023  All rights reserved
+      <div class="text-secondary">
+        Made with
+        <span class="text-danger"> &#10084; </span>
+        and
+        <a href="https://gohugo.io" target="_blank"> Hugo </a>
+      </div>
     </div>
-</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+  </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
