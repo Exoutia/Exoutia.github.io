@@ -4,6 +4,7 @@ date: 2023-12-23T09:06:35+05:30
 author: "Bibek Jha"
 image: /images/blogs/post1/img1.png
 draft: false
+tags: ['leetcode', 'easy', 'heapqueue']
 ---
 
 This is a simple software design problem in [LeetCode](https://leetcode.com/problems/kth-largest-element-in-a-stream/description/).

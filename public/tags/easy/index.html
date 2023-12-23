@@ -28,22 +28,14 @@
 
 
 
-<meta property="og:title" content="Kth Largest Element In a Stream (Leetcode)" />
-<meta property="og:description" content="This is a simple software design problem in LeetCode. So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.
-Intutive Approach This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the k-1 index element.
-The code would look like this:
-class kthLargest: def __init__(self, k: int, nums: list[int]): self." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://Exoutia.github.io/blogs/hello/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2023-12-23T09:06:35+05:30" />
-<meta property="article:modified_time" content="2023-12-23T09:06:35+05:30" /><meta property="og:site_name" content="Exoutia" />
+<meta property="og:title" content="easy" />
+<meta property="og:description" content="This is my portfolio and blog website." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://Exoutia.github.io/tags/easy/" /><meta property="og:site_name" content="Exoutia" />
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Kth Largest Element In a Stream (Leetcode)"/>
-<meta name="twitter:description" content="This is a simple software design problem in LeetCode. So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.
-Intutive Approach This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the k-1 index element.
-The code would look like this:
-class kthLargest: def __init__(self, k: int, nums: list[int]): self."/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="easy"/>
+<meta name="twitter:description" content="This is my portfolio and blog website."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -107,14 +99,11 @@ class kthLargest: def __init__(self, k: int, nums: list[int]): self."/>
     }
 </style>
 
-<meta name="description" content="">
-<link rel="stylesheet" href="/css/single.css">
-
-
-<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+<meta name="description" content="easy of Bibek Jha">
+<link rel="stylesheet" href="/css/list.css" media="all">
 
   <title>
-Kth Largest Element In a Stream (Leetcode) | Bibek Jha
+easy | Bibek Jha
 
   </title>
 </head>
@@ -314,183 +303,44 @@ Kth Largest Element In a Stream (Leetcode) | Bibek Jha
     </nav>
 </header>
 <div id="content">
-<section id="single">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-sm-12 col-md-12 col-lg-9">
-        <div class="pr-lg-4">
-          <div class="title mb-5">
-            <h1 class="text-center mb-4">Kth Largest Element In a Stream (Leetcode)</h1>
-            <div class="text-center">
-              Bibek Jha 
-              <small>|</small>
-              Dec 23, 2023
-
-              
-              <span id="readingTime">
-                min read
-              </span>
-              
-            </div>
-          </div>
-          
-          <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="/images/blogs/post1/img1.png" alt="Kth Largest Element In a Stream (Leetcode)">
-          </div>
-          
-          <article class="page-content  p-2">
-          <p>This is a simple software design problem in <a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/description/">LeetCode</a>.
-So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.</p>
-<h2 id="intutive-approach">Intutive Approach</h2>
-<p>This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the <code>k-1</code> index element.</p>
-<p>The code would look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">kthLargest</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, k: int, nums: list[int]):
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>k <span style="color:#f92672">=</span> k
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>nums <span style="color:#f92672">=</span> nums
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>nums<span style="color:#f92672">.</span>append(n)
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>nums<span style="color:#f92672">.</span>sort(reverse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(self<span style="color:#f92672">.</span>nums) <span style="color:#f92672">&gt;=</span> self<span style="color:#f92672">.</span>k:
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>nums[k<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>nums[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</span></span></code></pre></div><p><strong>Time Complexity: O(nlog(n))</strong>
-<strong>Space Complexity: O(n)</strong></p>
-<h2 id="using-priority-queue">Using Priority Queue</h2>
-<p>Now the previous solution is fine and great but this can be improved by using Priority queue. In Priority queue removing smallest elements takes <code>O(1)</code> time. So if you read the question we just need to store the top <code>k</code> largest element every time a new element is added.</p>
-<p>Now the approach should be clear that every time new data is added we remore the smallest element until the size of heap is same as k or smaller. And finally return the last element in the array.</p>
-<p>The code look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KthLargest</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, k: int, nums: list[int]):
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Initialize the class with k and a list of integers</span>
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>k <span style="color:#f92672">=</span> k
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>heap <span style="color:#f92672">=</span> nums
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Convert the list into a min-heap using heapq.heapify</span>
-</span></span><span style="display:flex;"><span>        heapq<span style="color:#f92672">.</span>heapify(self<span style="color:#f92672">.</span>heap)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Keep only the k largest elements in the heap</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>heap) <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>k:
-</span></span><span style="display:flex;"><span>            heapq<span style="color:#f92672">.</span>heappop(self<span style="color:#f92672">.</span>heap)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Add the new element to the heap</span>
-</span></span><span style="display:flex;"><span>        heapq<span style="color:#f92672">.</span>heappush(self<span style="color:#f92672">.</span>heap, n)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Ensure that the heap maintains the k largest elements</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>heap) <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>k:
-</span></span><span style="display:flex;"><span>            heapq<span style="color:#f92672">.</span>heappop(self<span style="color:#f92672">.</span>heap)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Return the current kth largest element, which is the smallest in the heap</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>heap[<span style="color:#ae81ff">0</span>]
-</span></span></code></pre></div><p>Hope this helps you understand this prbolem.</p>
-
-          </article>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-3">
-        <div id="stickySideBar" class="sticky-sidebar">
-          
-          <aside class="toc">
-              <h5>
-                Table Of Contents
-              </h5>
-              <div class="toc-content">
-                <nav id="TableOfContents">
-  <ul>
-    <li><a href="#intutive-approach">Intutive Approach</a></li>
-    <li><a href="#using-priority-queue">Using Priority Queue</a></li>
-  </ul>
-</nav>
-              </div>
-          </aside>
-          
-
-          
-
-          
-          <aside class="social">
-            <h5>Social</h5>
-            <div class="social-content">
-              <ul class="list-inline">
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=Kth%20Largest%20Element%20In%20a%20Stream%20%28Leetcode%29&url=https%3a%2f%2fExoutia.github.io%2fblogs%2fhello%2f">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Kth%20Largest%20Element%20In%20a%20Stream%20%28Leetcode%29: https%3a%2f%2fExoutia.github.io%2fblogs%2fhello%2f">
-                    <i class="fab fa-whatsapp"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Kth%20Largest%20Element%20In%20a%20Stream%20%28Leetcode%29&amp;body=Check%20out%20this%20site https%3a%2f%2fExoutia.github.io%2fblogs%2fhello%2f'>
-                    <i class="fa fa-envelope"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-          
-        </div>
-      </div>
-    </div>
+<div class="container pt-5" id="list-page">
+    <h2 class="text-center pb-2">easy</h2>
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
         
-      </div>
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card-columns">
+                <div class="card h-100">
+                    
+                    <div class="card-header">
+                        <a href="/blogs/kth-largest-element-in-a-stream/">
+                            <img src="/images/blogs/post1/img1.png" class="card-img-top" alt="Kth Largest Element In a Stream (Leetcode)">
+                        </a>
+                    </div>
+                    
+                    <div class="card-body bg-transparent p-4 shadow-sm">
+                        <a href="/blogs/kth-largest-element-in-a-stream/" class="primary-font card-title">
+                            <h5 class="card-title bg-transparent" title="Kth Largest Element In a Stream (Leetcode)">Kth Largest Element In a …</h5>
+                        </a>
+                        <div class="card-text secondary-font">
+                            <p>This is a simple software design problem in LeetCode. So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.
+Intutive Approach This soltuion can be pretty intutive just insert the new element and sort the …</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto post-footer bg-transparent py-3">
+                        <span class="float-start bg-transparent">Dec 23, 2023</span>
+                        <a href="/blogs/kth-largest-element-in-a-stream/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-auto m-3">
+                
+            </div>
+        </div>
     </div>
-  </div>
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
-</section>
-
-
-<div class="progress">
-  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="/js/scrollProgressBar.js"></script>
-
-
-<script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      topScroll.style.display = "block";
-    } else {
-      topScroll.style.display = "none";
-    }
-  }
-
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
-  
-  let stickySideBarElem = document.getElementById("stickySideBar");
-  let stickyNavBar =  true ;
-  if(stickyNavBar) {
-    let headerElem = document.getElementById("profileHeader");
-    let headerHeight = headerElem.offsetHeight + 15;
-    stickySideBarElem.style.top = headerHeight + "px";
-  } else {
-    stickySideBarElem.style.top = "50px";
-  }
-</script>
-
-
-<script src="/js/readingTime.js"></script>
-
-
 
   </div><footer>
     
@@ -508,13 +358,13 @@ So according to problem we have to create a datastruccture which will return the
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="/blogs/hello/">
+                    <a href="/blogs/kth-largest-element-in-a-stream/">
                         <img src="/images/blogs/post1/img1.png" class="card-img-top" alt="Kth Largest Element In a Stream (Leetcode)">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="/blogs/hello/" class="primary-font card-title">
+                    <a href="/blogs/kth-largest-element-in-a-stream/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="Kth Largest Element In a Stream (Leetcode)">Kth Largest Element In a …</h5>
                     </a>
                     <div class="card-text secondary-font">
@@ -524,7 +374,7 @@ Intutive Approach This soltuion can be pretty intutive just insert the new eleme
                 </div>
                 <div class="mt-auto card-footer">
                     <span class="float-start">Dec 23, 2023</span>
-                    <a href="/blogs/hello/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                    <a href="/blogs/kth-largest-element-in-a-stream/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
         </div>
