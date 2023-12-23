@@ -12,7 +12,7 @@ So according to problem we have to create a datastruccture which will return the
 
 ## Intutive Approach
 
-This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the *k-1* index element.
+This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the <mark>K</mark> index element.
 
 The code would look like this:
 
@@ -38,7 +38,7 @@ class kthLargest:
 
 ## Using Priority Queue
 
-Now the previous solution is fine and great but this can be improved by using Priority queue. In Priority queue removing smallest elements takes *O(1)* time. So if you read the question we just need to store the top *k* largest element every time a new element is added.
+Now the previous solution is fine and great but this can be improved by using Priority queue. In Priority queue removing smallest elements takes <mark>O(1)</mark> time. So if you read the question we just need to store the top <mark>K</mark> largest element every time a new element is added.
 
 Now the approach should be clear that every time new data is added we remore the smallest element until the size of heap is same as k or smaller. And finally return the last element in the array.
 

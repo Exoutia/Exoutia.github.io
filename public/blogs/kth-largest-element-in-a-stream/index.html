@@ -30,7 +30,7 @@
 
 <meta property="og:title" content="Kth Largest Element In a Stream (Leetcode)" />
 <meta property="og:description" content="This is a simple software design problem in LeetCode. So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.
-Intutive Approach This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the k-1 index element.
+Intutive Approach This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the K index element.
 The code would look like this:
 class kthLargest: def __init__(self, k: int, nums: list[int]): self." />
 <meta property="og:type" content="article" />
@@ -41,7 +41,7 @@ class kthLargest: def __init__(self, k: int, nums: list[int]): self." />
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Kth Largest Element In a Stream (Leetcode)"/>
 <meta name="twitter:description" content="This is a simple software design problem in LeetCode. So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.
-Intutive Approach This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the k-1 index element.
+Intutive Approach This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the K index element.
 The code would look like this:
 class kthLargest: def __init__(self, k: int, nums: list[int]): self."/>
 
@@ -65,12 +65,12 @@ class kthLargest: def __init__(self, k: int, nums: list[int]): self."/>
         --secondary-color: #f8f9fa;
 
          
-        --text-color-dark: #F0F4EF;
-        --text-secondary-color-dark: #dad7cd;
-        --background-color-dark: #000814;
-        --secondary-background-color-dark: #001d3d;
+        --text-color-dark: #cdd6f4;
+        --text-secondary-color-dark: #a6adc8;
+        --background-color-dark: #11111b;
+        --secondary-background-color-dark: #181825;
         --primary-color-dark: #F0F4EF;
-        --secondary-color-dark: #00162D;
+        --secondary-color-dark: #1e1e2e;
     }
     body {
         font-size: 1rem;
@@ -332,7 +332,7 @@ Kth Largest Element In a Stream (Leetcode) | Bibek Jha
           <p>This is a simple software design problem in <a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/description/">LeetCode</a>.
 So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.</p>
 <h2 id="intutive-approach">Intutive Approach</h2>
-<p>This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the <em>k-1</em> index element.</p>
+<p>This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the <mark>K</mark> index element.</p>
 <p>The code would look like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">kthLargest</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, k: int, nums: list[int]):
@@ -353,7 +353,7 @@ So according to problem we have to create a datastruccture which will return the
 <strong>Space Complexity: O(n)</strong></p>
 </blockquote>
 <h2 id="using-priority-queue">Using Priority Queue</h2>
-<p>Now the previous solution is fine and great but this can be improved by using Priority queue. In Priority queue removing smallest elements takes <em>O(1)</em> time. So if you read the question we just need to store the top <em>k</em> largest element every time a new element is added.</p>
+<p>Now the previous solution is fine and great but this can be improved by using Priority queue. In Priority queue removing smallest elements takes <mark>O(1)</mark> time. So if you read the question we just need to store the top <mark>K</mark> largest element every time a new element is added.</p>
 <p>Now the approach should be clear that every time new data is added we remore the smallest element until the size of heap is same as k or smaller. And finally return the last element in the array.</p>
 <p>The code look like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
