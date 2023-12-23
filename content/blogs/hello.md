@@ -1,14 +1,16 @@
-+++
-title = 'Kth Largest Element In a Stream (Leetcode)'
-date = 2023-12-23T09:06:35+05:30
-draft = false
-+++
+---
+title: "Kth Largest Element In a Stream (Leetcode)"
+date: 2023-12-23T09:06:35+05:30
+author: "Bibek Jha"
+image: /images/blogs/post1/img1.png
+draft: false
+---
 
-
-This is a simple software design problem in [LeetCode](https://leetcode.com/problems/kth-largest-element-in-a-stream/description/). 
+This is a simple software design problem in [LeetCode](https://leetcode.com/problems/kth-largest-element-in-a-stream/description/).
 So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.
 
 ## Intutive Approach
+
 This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the `k-1` index element.
 
 The code would look like this:
@@ -28,15 +30,18 @@ class kthLargest:
         else:
             return self.nums[-1]
 ```
+
 **Time Complexity: O(nlog(n))**
-**Space Complexity: O(n)** 
+**Space Complexity: O(n)**
 
 ## Using Priority Queue
+
 Now the previous solution is fine and great but this can be improved by using Priority queue. In Priority queue removing smallest elements takes `O(1)` time. So if you read the question we just need to store the top `k` largest element every time a new element is added.
 
 Now the approach should be clear that every time new data is added we remore the smallest element until the size of heap is same as k or smaller. And finally return the last element in the array.
 
 The code look like this:
+
 ```python
 import heapq
 
@@ -45,10 +50,10 @@ class KthLargest:
         # Initialize the class with k and a list of integers
         self.k = k
         self.heap = nums
-        
+
         # Convert the list into a min-heap using heapq.heapify
         heapq.heapify(self.heap)
-        
+
         # Keep only the k largest elements in the heap
         while len(self.heap) > self.k:
             heapq.heappop(self.heap)
@@ -56,15 +61,14 @@ class KthLargest:
     def add(self, n: int) -> int:
         # Add the new element to the heap
         heapq.heappush(self.heap, n)
-        
+
         # Ensure that the heap maintains the k largest elements
         while len(self.heap) > self.k:
             heapq.heappop(self.heap)
-            
+
         # Return the current kth largest element, which is the smallest in the heap
         return self.heap[0]
 
 ```
 
 Hope this helps you understand this prbolem.
-
