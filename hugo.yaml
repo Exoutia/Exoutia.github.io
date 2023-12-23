@@ -85,7 +85,7 @@ params:
     textAlign: left # default: left
 
   # color preference
-  # color:
+  color:
   #   textColor:
   #   secondaryTextColor:
   #   backgroundColor:
@@ -93,13 +93,13 @@ params:
   #   primaryColor:
   #   secondaryColor:
 
-  #   darkmode:
-  #     textColor:
-  #     secondaryTextColor:
-  #     backgroundColor:
-  #     secondaryBackgroundColor:
-  #     primaryColor:
-  #     secondaryColor:
+    darkmode:
+      textColor: "#F0F4EF"
+      secondaryTextColor: "#dad7cd"
+      backgroundColor: "#000814"
+      secondaryBackgroundColor: "#001d3d"
+      primaryColor: "#F0F4EF"
+      secondaryColor: "#00162D"
 
   # If you want to customize the menu, you can change it here
   navbar:
@@ -208,7 +208,7 @@ params:
         url: https://www.linkedin.com/posts/bibek-jha-aa288a202_i-want-to-share-my-achievement-of-securing-activity-6925286744338612225-1dnq
         image: /images/bot_making.jpg
       - title: Winner of Wavicle 4.0 SPIE Choice Award
-        content: My project for segregating waste smartly during the processing of garbage has won this award. Wavicle 4.0 was a college-level project exhibition during which around 40 projects were presented.
+        content: My project for segregating waste smartly during the processing of garbage has won this award.
         url: https://www.linkedin.com/posts/bibek-jha-aa288a202_today-i-want-to-share-my-achievement-of-winning-activity-7057191004013010944-E67_?utm_source=share&utm_medium=member_android
         image: /images/wavicle.png
       
@@ -308,6 +308,6 @@ params:
     articleList: "Jan 2, 2006"
     articleRecent: "Jan 2, 2006"
 
-  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  # customScripts: -| # You can add custom scripts which will be added before </body> tag
   #  <script type="text/javascript"><!-- any script here --></script
 
