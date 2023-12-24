@@ -1,14 +1,11 @@
 ---
-title: 'Last Stone Weight'
+title: "Last Stone Weight"
 date: 2023-12-24T07:46:57+05:30
 draft: false
-author: 'Bibek Jha'
+author: "Bibek Jha"
 image: /images/blogs/post2/img1.png
-tags: [
-    'leetcode',
-    'easy',
-    'heapqueue'
-]
+tags: ["leetcode", "easy", "heapqueue"]
+description: "Leetcode problem solution"
 ---
 
 Link to the question: [LeetCode/Last-stone-weight](https://leetcode.com/problems/last-stone-weight/description/)
@@ -60,7 +57,7 @@ For space complexity is constant at no step we are using the any new array and e
 
 Now we can optimize the solution by observing the steps and what could we change different. First step while optimizing the code usually check for the repeating steps and eleminate those by using some tricks or data structures.
 
-In the previous solution it is obvious we are sorting the list after every iteration if we could just add the stones into the list and it will arrange itself in the correct order we could save so much time. 
+In the previous solution it is obvious we are sorting the list after every iteration if we could just add the stones into the list and it will arrange itself in the correct order we could save so much time.
 
 To be fair there is a datasctructure which does that named as "Priority Queue" with two variants "Min Priority Queue" and "Max Priority Queue".
 
@@ -70,7 +67,7 @@ We are going to use "Max Priority Queue" to be mroe specific ( but python <mark>
 
 Getting the largest element in Max Priority Queue takes <mark>O(1)</mark> time and insertion takes <mark>O(log(n))</mark>.
 
-```python 
+```python
 
 import heapq
 
@@ -89,8 +86,9 @@ class Solution:
                 heapq.heappush(heap, -1 * (y - x))
         return heap[0] * -1 if heap else 0  # Return the weight of the last remaining stone or 0 if no stones left
 ```
+
 Now analyze the time and space complexity for the solution. The heap operations take <mark>O(log n)</mark>, and the loop iterates until there is at most one stone left, resulting in a total time complexity of <mark>O(nlog(n))</mark> due to the heap operations. The space complexity is O(n) as the heap stores the negation of stone weights.
 
 > Time Complexity: O(nlog(n))
-<br>
+> <br>
 > Space Complexity: O(n)
