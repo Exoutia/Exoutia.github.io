@@ -6,8 +6,15 @@
     <description>Recent content in heapqueue on Bibek Jha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Dec 2023 09:06:35 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 24 Dec 2023 07:46:57 +0530</lastBuildDate>
     <atom:link href="https://Exoutia.github.io/tags/heapqueue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Last Stone Weight</title>
+      <link>https://Exoutia.github.io/blogs/last-stone-weight/</link>
+      <pubDate>Sun, 24 Dec 2023 07:46:57 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/last-stone-weight/</guid>
+      <description>Link to the question: LeetCode/Last-stone-weight&#xA;In this problem, you are given an array of integers representing the weights of stones. The goal is to simulate a game where, at each turn, the two heaviest stones are selected and either both are destroyed (if they have the same weight) or the lighter stone is destroyed, and the heavier one&amp;rsquo;s weight is updated. The process repeats until there is at most one stone left, and you need to return the weight of the last remaining stone or 0 if there are no stones left.</description>
+    </item>
     <item>
       <title>Kth Largest Element In a Stream (Leetcode)</title>
       <link>https://Exoutia.github.io/blogs/kth-largest-element-in-a-stream/</link>
