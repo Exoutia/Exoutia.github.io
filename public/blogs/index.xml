@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on Bibek Jha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Dec 2023 07:46:57 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 25 Dec 2023 18:25:21 +0530</lastBuildDate>
     <atom:link href="https://Exoutia.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>K Closest Points to Origin</title>
+      <link>https://Exoutia.github.io/blogs/k-closest-points-to-origin/</link>
+      <pubDate>Mon, 25 Dec 2023 18:25:21 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/k-closest-points-to-origin/</guid>
+      <description>This blog discusses the solution to the LeetCode problem of finding the Kth closest points to the origin.&#xA;Intuitive Approach An intuitive solution involves calculating the distance of each point from the origin, storing it with the point, and then sorting the list of points based on these distances. The Kth closest point is then retrieved from the sorted list.&#xA;Here&amp;rsquo;s the Python code for the intuitive approach:&#xA;from math import sqrt class Solution: def kClosest(self, points: List[List[int]], k: int) -&amp;gt; List[List[int]]: val = [] for i in points: x = i[0] y = i[1] val.</description>
+    </item>
     <item>
       <title>Last Stone Weight</title>
       <link>https://Exoutia.github.io/blogs/last-stone-weight/</link>
