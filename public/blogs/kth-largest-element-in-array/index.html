@@ -28,15 +28,15 @@
 
 
 
-<meta property="og:title" content="Last Stone Weight" />
+<meta property="og:title" content="Kth Largest Element in Array" />
 <meta property="og:description" content="Leetcode problem solution" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://Exoutia.github.io/blogs/last-stone-weight/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2023-12-24T07:46:57+05:30" />
-<meta property="article:modified_time" content="2023-12-24T07:46:57+05:30" /><meta property="og:site_name" content="Exoutia" />
+<meta property="og:url" content="https://Exoutia.github.io/blogs/kth-largest-element-in-array/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2023-12-26T12:40:37+05:30" />
+<meta property="article:modified_time" content="2023-12-26T12:40:37+05:30" /><meta property="og:site_name" content="Exoutia" />
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Last Stone Weight"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Kth Largest Element in Array"/>
 <meta name="twitter:description" content="Leetcode problem solution"/>
 
 
@@ -108,7 +108,7 @@
 <script defer src="/fontawesome-6/all-6.4.2.js"></script>
 
   <title>
-Last Stone Weight | Bibek Jha
+Kth Largest Element in Array | Bibek Jha
 
   </title>
 </head>
@@ -304,11 +304,11 @@ Last Stone Weight | Bibek Jha
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">Last Stone Weight</h1>
+            <h1 class="text-center mb-4">Kth Largest Element in Array</h1>
             <div class="text-center">
               Bibek Jha 
               <small>|</small>
-              Dec 24, 2023
+              Dec 26, 2023
 
               
               <span id="readingTime">
@@ -319,76 +319,39 @@ Last Stone Weight | Bibek Jha
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="/images/blogs/post2/img1.png" alt="Last Stone Weight">
+            <img class="img-fluid mx-auto d-block" src="/images/blogs/post4/img1.png" alt="Kth Largest Element in Array">
           </div>
           
           <article class="page-content  p-2">
-          <p>Link to the question: <a href="https://leetcode.com/problems/last-stone-weight/description/">LeetCode/Last-stone-weight</a></p>
-<p>In this problem, you are given an array of integers representing the weights of stones. The goal is to simulate a game where, at each turn, the two heaviest stones are selected and either both are destroyed (if they have the same weight) or the lighter stone is destroyed, and the heavier one&rsquo;s weight is updated. The process repeats until there is at most one stone left, and you need to return the weight of the last remaining stone or 0 if there are no stones left.</p>
+          <p>Today we are going to solve this <a href="https://leetcode.com/problems/kth-largest-element-in-an-array/description/">leetcode problem</a>. In this problem we are required to find the kth largest element in an array of number.</p>
 <h2 id="intutive-approach">Intutive Approach</h2>
-<p>The forcefull approach would be to find the two largest stones, smash them and insert their value into the list again. This will be done until the length of list of stones is less than one.
-You can then make this somewhat good by sorting the array and then pick the two largest element from the last and insert them again into the array and again sort the array to make it work in next iteration like this.</p>
+<p>This is pretty easy sum if we just sort the array and the return the kth largest element from the array. In python this is pretty easy problme cause in python list can be quried with negative number to return the elements from the end of arrray. For example <mark>List[-1]</mark> give the last element and <mark>list[-2]</mark> gives the second last element from the array and so one.</p>
+<p>The code looks like this for the obvious approach:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lastStoneWeight</span>(self, stones: List[int]) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 1: Sort the list of stones in ascending order</span>
-</span></span><span style="display:flex;"><span>        stones<span style="color:#f92672">.</span>sort()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 2: Continue the process until there are at most two stones remaining</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(stones) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Step 3: Select the two heaviest stones</span>
-</span></span><span style="display:flex;"><span>            larger <span style="color:#f92672">=</span> stones<span style="color:#f92672">.</span>pop()       <span style="color:#75715e"># Get the weight of the larger stone</span>
-</span></span><span style="display:flex;"><span>            smaller <span style="color:#f92672">=</span> stones<span style="color:#f92672">.</span>pop()      <span style="color:#75715e"># Get the weight of the smaller stone</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Step 4: Process the stones based on their weights</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> larger <span style="color:#f92672">==</span> smaller:
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Both stones are destroyed if they have the same weight</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Create a new stone with weight equal to the difference of the two stones&#39; weights</span>
-</span></span><span style="display:flex;"><span>                stones<span style="color:#f92672">.</span>append((larger <span style="color:#f92672">-</span> smaller))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Step 5: Sort the stones again in ascending order</span>
-</span></span><span style="display:flex;"><span>            stones<span style="color:#f92672">.</span>sort()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Return the weight of the last remaining stone or 0 if there are no stones left</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> stones[<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">if</span> stones <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
-</span></span></code></pre></div><p>Now analyze the time and space complexity for the solution. The sorting takes <mark>O(nlog(n))</mark> and the sorting is done at every iteration which is running for n times as the length of the stones list this implies that for n number of stones the sorting is done <mark>n</mark>. By calculating the time complexity comes as <mark>O(n<sup>2</sup>log(n))</mark>.</p>
-<p>For space complexity is constant at no step we are using the any new array and every operation done in same array as stones so it will come to <mark>O(n)</mark>.</p>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">kthLargest</span>(self, nums: List[int], k: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        nums<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> nums[<span style="color:#f92672">-</span>k]
+</span></span></code></pre></div><p>The time complexity is <mark>O(nlog(n))</mark> as the only relevant time is taken while sorting of array. The space complexity is <mark>O(n)</mark> which is the size of array.</p>
 <blockquote>
-<p></mark>Time Complexity: O(n<sup>2</sup> log(n))
-<br>
-Space Complexity: O(n)</p>
+<p><strong>Time Complexity: O(nlog(n))</strong>
+<br><br>
+<strong>Space Complexity: O(n)</strong></p>
 </blockquote>
-<h2 id="max-priority-queue">Max Priority Queue</h2>
-<p>Now we can optimize the solution by observing the steps and what could we change different. First step while optimizing the code usually check for the repeating steps and eleminate those by using some tricks or data structures.</p>
-<p>In the previous solution it is obvious we are sorting the list after every iteration if we could just add the stones into the list and it will arrange itself in the correct order we could save so much time.</p>
-<p>To be fair there is a datasctructure which does that named as &ldquo;Priority Queue&rdquo; with two variants &ldquo;Min Priority Queue&rdquo; and &ldquo;Max Priority Queue&rdquo;.</p>
-<p>A max-priority queue is a data structure that maintains a collection of elements with assigned priorities and allows efficient retrieval of the element with the highest priority. The element with the maximum priority is always dequeued first.</p>
-<p>We are going to use &ldquo;Max Priority Queue&rdquo; to be mroe specific ( but python <mark>heapq</mark> does not support max-priority queue so we just multiply the <mark>-1</mark> to make the largest element smallest and while getting the element we just multiply with <mark>-1</mark> again this will ensure the calculation is correct at every step). By using this when we call two times <mark>heappop</mark> we will get two largest element and when inserting the new element the datastructure will be correctly arranged.</p>
-<p>Getting the largest element in Max Priority Queue takes <mark>O(1)</mark> time and insertion takes <mark>O(log(n))</mark>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
-</span></span><span style="display:flex;"><span>
+<h2 id="using-priority-queue">Using Priority Queue</h2>
+<p>Now as we know what a priority queue is os if we just use its property then just by running the heappop command for k we can get the kth largest element from the priority queue (Max Heap).</p>
+<p>In python heapq provides many functionality for working with heap and its different function, one such is <mark>nlargest</mark> function that takes <mark>k</mark> and a <mark>list</mark> to return the kth largest element, we will use that for the code.</p>
+<p>The code will look like this for this qpproach.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lastStoneWeight</span>(self, stones: List[int]) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Initialize a max heap, push negation of stone weights, and update heap after each smashing operation</span>
-</span></span><span style="display:flex;"><span>        heap <span style="color:#f92672">=</span> []
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> stones:
-</span></span><span style="display:flex;"><span>            heapq<span style="color:#f92672">.</span>heappush(heap, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> i)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(heap) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
-</span></span><span style="display:flex;"><span>            y <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> heapq<span style="color:#f92672">.</span>heappop(heap)
-</span></span><span style="display:flex;"><span>            x <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> heapq<span style="color:#f92672">.</span>heappop(heap)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> y:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>                heapq<span style="color:#f92672">.</span>heappush(heap, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> (y <span style="color:#f92672">-</span> x))
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> heap[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> heap <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># Return the weight of the last remaining stone or 0 if no stones left</span>
-</span></span></code></pre></div><p>Now analyze the time and space complexity for the solution. The heap operations take <mark>O(log n)</mark>, and the loop iterates until there is at most one stone left, resulting in a total time complexity of <mark>O(nlog(n))</mark> due to the heap operations. The space complexity is O(n) as the heap stores the negation of stone weights.</p>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">kthLargest</span>(self, nums: List[int], k: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> heapq<span style="color:#f92672">.</span>nlargest(k, nums)
+</span></span></code></pre></div><p>Now the time complexity is <mark>O(n)</mark> as this is the time it takes to make a list heap inplace and space complexity is same previously <mark>O(n)</mark> as space is same for the storing of list.</p>
 <blockquote>
-<p>Time Complexity: O(nlog(n))
+<p><strong>Time Complexity: O(n)</strong>
 <br>
-Space Complexity: O(n)</p>
+<strong>Space Complexity: O(n)</strong></p>
 </blockquote>
+<p>If you find any problem with this article or you just want to have chang you can contact me through the the socials.</p>
 
           </article>
         </div>
@@ -404,7 +367,7 @@ Space Complexity: O(n)</p>
                 <nav id="TableOfContents">
   <ul>
     <li><a href="#intutive-approach">Intutive Approach</a></li>
-    <li><a href="#max-priority-queue">Max Priority Queue</a></li>
+    <li><a href="#using-priority-queue">Using Priority Queue</a></li>
   </ul>
 </nav>
               </div>
@@ -418,9 +381,9 @@ Space Complexity: O(n)</p>
               
               <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/leetcode" target="_blank">leetcode</a></li>
               
-              <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/easy" target="_blank">easy</a></li>
-              
               <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/heapqueue" target="_blank">heapqueue</a></li>
+              
+              <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/medium" target="_blank">medium</a></li>
               
             </ul>
           </aside>
@@ -432,17 +395,17 @@ Space Complexity: O(n)</p>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=Last%20Stone%20Weight&url=https%3a%2f%2fExoutia.github.io%2fblogs%2flast-stone-weight%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=Kth%20Largest%20Element%20in%20Array&url=https%3a%2f%2fExoutia.github.io%2fblogs%2fkth-largest-element-in-array%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Last%20Stone%20Weight: https%3a%2f%2fExoutia.github.io%2fblogs%2flast-stone-weight%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Kth%20Largest%20Element%20in%20Array: https%3a%2f%2fExoutia.github.io%2fblogs%2fkth-largest-element-in-array%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Last%20Stone%20Weight&amp;body=Check%20out%20this%20site https%3a%2f%2fExoutia.github.io%2fblogs%2flast-stone-weight%2f'>
+                  <a target="_blank" href='mailto:?subject=Kth%20Largest%20Element%20in%20Array&amp;body=Check%20out%20this%20site https%3a%2f%2fExoutia.github.io%2fblogs%2fkth-largest-element-in-array%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>

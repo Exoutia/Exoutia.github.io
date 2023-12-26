@@ -6,14 +6,21 @@
     <description>Recent content in Blogs on Bibek Jha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Dec 2023 18:25:21 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 26 Dec 2023 12:40:37 +0530</lastBuildDate>
     <atom:link href="https://Exoutia.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kth Largest Element in Array</title>
+      <link>https://Exoutia.github.io/blogs/kth-largest-element-in-array/</link>
+      <pubDate>Tue, 26 Dec 2023 12:40:37 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/kth-largest-element-in-array/</guid>
+      <description>Today we are going to solve this leetcode problem. In this problem we are required to find the kth largest element in an array of number.&#xA;Intutive Approach This is pretty easy sum if we just sort the array and the return the kth largest element from the array. In python this is pretty easy problme cause in python list can be quried with negative number to return the elements from the end of arrray.</description>
+    </item>
     <item>
       <title>K Closest Points to Origin</title>
       <link>https://Exoutia.github.io/blogs/k-closest-points-to-origin/</link>
       <pubDate>Mon, 25 Dec 2023 18:25:21 +0530</pubDate>
       <guid>https://Exoutia.github.io/blogs/k-closest-points-to-origin/</guid>
-      <description>This blog discusses the solution to the LeetCode problem of finding the Kth closest points to the origin.&#xA;Intuitive Approach An intuitive solution involves calculating the distance of each point from the origin, storing it with the point, and then sorting the list of points based on these distances. The Kth closest point is then retrieved from the sorted list.&#xA;Here&amp;rsquo;s the Python code for the intuitive approach:&#xA;from math import sqrt class Solution: def kClosest(self, points: List[List[int]], k: int) -&amp;gt; List[List[int]]: val = [] for i in points: x = i[0] y = i[1] val.</description>
+      <description>Today we discusses the solution to the LeetCode problem of finding the Kth closest points to the origin.&#xA;Intuitive Approach An intuitive solution involves calculating the distance of each point from the origin, storing it with the point, and then sorting the list of points based on these distances. The Kth closest point is then retrieved from the sorted list.&#xA;Here&amp;rsquo;s the Python code for the intuitive approach:&#xA;from math import sqrt class Solution: def kClosest(self, points: List[List[int]], k: int) -&amp;gt; List[List[int]]: val = [] for i in points: x = i[0] y = i[1] val.</description>
     </item>
     <item>
       <title>Last Stone Weight</title>

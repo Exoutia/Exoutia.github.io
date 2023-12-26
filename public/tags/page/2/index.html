@@ -28,16 +28,14 @@
 
 
 
-<meta property="og:title" content="Last Stone Weight" />
-<meta property="og:description" content="Leetcode problem solution" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://Exoutia.github.io/blogs/last-stone-weight/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2023-12-24T07:46:57+05:30" />
-<meta property="article:modified_time" content="2023-12-24T07:46:57+05:30" /><meta property="og:site_name" content="Exoutia" />
+<meta property="og:title" content="Tags" />
+<meta property="og:description" content="This is my portfolio and blog website." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://Exoutia.github.io/tags/" /><meta property="og:site_name" content="Exoutia" />
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Last Stone Weight"/>
-<meta name="twitter:description" content="Leetcode problem solution"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Tags"/>
+<meta name="twitter:description" content="This is my portfolio and blog website."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -101,14 +99,11 @@
     }
 </style>
 
-<meta name="description" content="Leetcode problem solution">
-<link rel="stylesheet" href="/css/single.css">
-
-
-<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+<meta name="description" content="Tags of Bibek Jha">
+<link rel="stylesheet" href="/css/list.css" media="all">
 
   <title>
-Last Stone Weight | Bibek Jha
+Tags | Bibek Jha
 
   </title>
 </head>
@@ -298,212 +293,57 @@ Last Stone Weight | Bibek Jha
     </nav>
 </header>
 <div id="content">
-<section id="single">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-sm-12 col-md-12 col-lg-9">
-        <div class="pr-lg-4">
-          <div class="title mb-5">
-            <h1 class="text-center mb-4">Last Stone Weight</h1>
-            <div class="text-center">
-              Bibek Jha 
-              <small>|</small>
-              Dec 24, 2023
-
-              
-              <span id="readingTime">
-                min read
-              </span>
-              
-            </div>
-          </div>
-          
-          <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="/images/blogs/post2/img1.png" alt="Last Stone Weight">
-          </div>
-          
-          <article class="page-content  p-2">
-          <p>Link to the question: <a href="https://leetcode.com/problems/last-stone-weight/description/">LeetCode/Last-stone-weight</a></p>
-<p>In this problem, you are given an array of integers representing the weights of stones. The goal is to simulate a game where, at each turn, the two heaviest stones are selected and either both are destroyed (if they have the same weight) or the lighter stone is destroyed, and the heavier one&rsquo;s weight is updated. The process repeats until there is at most one stone left, and you need to return the weight of the last remaining stone or 0 if there are no stones left.</p>
-<h2 id="intutive-approach">Intutive Approach</h2>
-<p>The forcefull approach would be to find the two largest stones, smash them and insert their value into the list again. This will be done until the length of list of stones is less than one.
-You can then make this somewhat good by sorting the array and then pick the two largest element from the last and insert them again into the array and again sort the array to make it work in next iteration like this.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lastStoneWeight</span>(self, stones: List[int]) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 1: Sort the list of stones in ascending order</span>
-</span></span><span style="display:flex;"><span>        stones<span style="color:#f92672">.</span>sort()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 2: Continue the process until there are at most two stones remaining</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(stones) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Step 3: Select the two heaviest stones</span>
-</span></span><span style="display:flex;"><span>            larger <span style="color:#f92672">=</span> stones<span style="color:#f92672">.</span>pop()       <span style="color:#75715e"># Get the weight of the larger stone</span>
-</span></span><span style="display:flex;"><span>            smaller <span style="color:#f92672">=</span> stones<span style="color:#f92672">.</span>pop()      <span style="color:#75715e"># Get the weight of the smaller stone</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Step 4: Process the stones based on their weights</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> larger <span style="color:#f92672">==</span> smaller:
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Both stones are destroyed if they have the same weight</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Create a new stone with weight equal to the difference of the two stones&#39; weights</span>
-</span></span><span style="display:flex;"><span>                stones<span style="color:#f92672">.</span>append((larger <span style="color:#f92672">-</span> smaller))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Step 5: Sort the stones again in ascending order</span>
-</span></span><span style="display:flex;"><span>            stones<span style="color:#f92672">.</span>sort()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Return the weight of the last remaining stone or 0 if there are no stones left</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> stones[<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">if</span> stones <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
-</span></span></code></pre></div><p>Now analyze the time and space complexity for the solution. The sorting takes <mark>O(nlog(n))</mark> and the sorting is done at every iteration which is running for n times as the length of the stones list this implies that for n number of stones the sorting is done <mark>n</mark>. By calculating the time complexity comes as <mark>O(n<sup>2</sup>log(n))</mark>.</p>
-<p>For space complexity is constant at no step we are using the any new array and every operation done in same array as stones so it will come to <mark>O(n)</mark>.</p>
-<blockquote>
-<p></mark>Time Complexity: O(n<sup>2</sup> log(n))
-<br>
-Space Complexity: O(n)</p>
-</blockquote>
-<h2 id="max-priority-queue">Max Priority Queue</h2>
-<p>Now we can optimize the solution by observing the steps and what could we change different. First step while optimizing the code usually check for the repeating steps and eleminate those by using some tricks or data structures.</p>
-<p>In the previous solution it is obvious we are sorting the list after every iteration if we could just add the stones into the list and it will arrange itself in the correct order we could save so much time.</p>
-<p>To be fair there is a datasctructure which does that named as &ldquo;Priority Queue&rdquo; with two variants &ldquo;Min Priority Queue&rdquo; and &ldquo;Max Priority Queue&rdquo;.</p>
-<p>A max-priority queue is a data structure that maintains a collection of elements with assigned priorities and allows efficient retrieval of the element with the highest priority. The element with the maximum priority is always dequeued first.</p>
-<p>We are going to use &ldquo;Max Priority Queue&rdquo; to be mroe specific ( but python <mark>heapq</mark> does not support max-priority queue so we just multiply the <mark>-1</mark> to make the largest element smallest and while getting the element we just multiply with <mark>-1</mark> again this will ensure the calculation is correct at every step). By using this when we call two times <mark>heappop</mark> we will get two largest element and when inserting the new element the datastructure will be correctly arranged.</p>
-<p>Getting the largest element in Max Priority Queue takes <mark>O(1)</mark> time and insertion takes <mark>O(log(n))</mark>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lastStoneWeight</span>(self, stones: List[int]) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Initialize a max heap, push negation of stone weights, and update heap after each smashing operation</span>
-</span></span><span style="display:flex;"><span>        heap <span style="color:#f92672">=</span> []
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> stones:
-</span></span><span style="display:flex;"><span>            heapq<span style="color:#f92672">.</span>heappush(heap, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> i)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(heap) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
-</span></span><span style="display:flex;"><span>            y <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> heapq<span style="color:#f92672">.</span>heappop(heap)
-</span></span><span style="display:flex;"><span>            x <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> heapq<span style="color:#f92672">.</span>heappop(heap)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> y:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>                heapq<span style="color:#f92672">.</span>heappush(heap, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> (y <span style="color:#f92672">-</span> x))
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> heap[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> heap <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># Return the weight of the last remaining stone or 0 if no stones left</span>
-</span></span></code></pre></div><p>Now analyze the time and space complexity for the solution. The heap operations take <mark>O(log n)</mark>, and the loop iterates until there is at most one stone left, resulting in a total time complexity of <mark>O(nlog(n))</mark> due to the heap operations. The space complexity is O(n) as the heap stores the negation of stone weights.</p>
-<blockquote>
-<p>Time Complexity: O(nlog(n))
-<br>
-Space Complexity: O(n)</p>
-</blockquote>
-
-          </article>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-3">
-        <div id="stickySideBar" class="sticky-sidebar">
-          
-          <aside class="toc">
-              <h5>
-                Table Of Contents
-              </h5>
-              <div class="toc-content">
-                <nav id="TableOfContents">
-  <ul>
-    <li><a href="#intutive-approach">Intutive Approach</a></li>
-    <li><a href="#max-priority-queue">Max Priority Queue</a></li>
-  </ul>
-</nav>
-              </div>
-          </aside>
-          
-
-          
-          <aside class="tags">
-            <h5>Tags</h5>
-            <ul class="tags-ul list-unstyled list-inline">
-              
-              <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/leetcode" target="_blank">leetcode</a></li>
-              
-              <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/easy" target="_blank">easy</a></li>
-              
-              <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/heapqueue" target="_blank">heapqueue</a></li>
-              
-            </ul>
-          </aside>
-          
-
-          
-          <aside class="social">
-            <h5>Social</h5>
-            <div class="social-content">
-              <ul class="list-inline">
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=Last%20Stone%20Weight&url=https%3a%2f%2fExoutia.github.io%2fblogs%2flast-stone-weight%2f">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Last%20Stone%20Weight: https%3a%2f%2fExoutia.github.io%2fblogs%2flast-stone-weight%2f">
-                    <i class="fab fa-whatsapp"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Last%20Stone%20Weight&amp;body=Check%20out%20this%20site https%3a%2f%2fExoutia.github.io%2fblogs%2flast-stone-weight%2f'>
-                    <i class="fa fa-envelope"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-          
-        </div>
-      </div>
-    </div>
+<div class="container pt-5" id="list-page">
+    <h2 class="text-center pb-2">Tags</h2>
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
         
-      </div>
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card-columns">
+                <div class="card h-100">
+                    
+                    <div class="card-body bg-transparent p-4 shadow-sm">
+                        <a href="/tags/easy/" class="primary-font card-title">
+                            <h5 class="card-title bg-transparent" title="easy">easy</h5>
+                        </a>
+                        <div class="card-text secondary-font">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="mt-auto post-footer bg-transparent py-3">
+                        <span class="float-start bg-transparent">Dec 24, 2023</span>
+                        <a href="/tags/easy/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-auto m-3">
+                
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/tags/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/tags/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/tags/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+            </div>
+        </div>
     </div>
-  </div>
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
-</section>
-
-
-<div class="progress">
-  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="/js/scrollProgressBar.js"></script>
-
-
-<script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      topScroll.style.display = "block";
-    } else {
-      topScroll.style.display = "none";
-    }
-  }
-
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
-  
-  let stickySideBarElem = document.getElementById("stickySideBar");
-  let stickyNavBar =  true ;
-  if(stickyNavBar) {
-    let headerElem = document.getElementById("profileHeader");
-    let headerHeight = headerElem.offsetHeight + 15;
-    stickySideBarElem.style.top = headerHeight + "px";
-  } else {
-    stickySideBarElem.style.top = "50px";
-  }
-</script>
-
-
-<script src="/js/readingTime.js"></script>
-
-
 
   </div><footer>
     
