@@ -98,7 +98,7 @@ params:
       secondaryTextColor: "#cdcdcd"
       backgroundColor: "#11111b"
       secondaryBackgroundColor: "#181825"
-      primaryColor: "#F0F4EF"
+      primaryColor: "#03FCA5"
       secondaryColor: "#1e1e2e"
 
   # If you want to customize the menu, you can change it here
