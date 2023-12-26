@@ -94,8 +94,8 @@ params:
     secondaryColor: "#ebf5f1"
 
     darkmode:
-      textColor: "#cdd6f4"
-      secondaryTextColor: "#a6adc8"
+      textColor: "#fcfcfc"
+      secondaryTextColor: "#cdcdcd"
       backgroundColor: "#11111b"
       secondaryBackgroundColor: "#181825"
       primaryColor: "#F0F4EF"
