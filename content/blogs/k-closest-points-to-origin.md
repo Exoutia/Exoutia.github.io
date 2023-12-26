@@ -4,11 +4,11 @@ date: 2023-12-25T18:25:21+05:30
 author: "Bibek Jha"
 image: /images/blogs/post3/img1.png
 draft: false
-tags: ['leetcode', 'easy', 'heapqueue']
+tags: ['leetcode', 'medium', 'heapqueue']
 description: 'Leetcode problem solution'
 ---
 
-This blog discusses the solution to the [LeetCode problem](https://leetcode.com/problems/kth-closest-points-to-origin/description/) of finding the Kth closest points to the origin.
+Today we discusses the solution to the [LeetCode problem](https://leetcode.com/problems/k-closest-points-to-origin/) of finding the Kth closest points to the origin.
 
 ## Intuitive Approach
 
