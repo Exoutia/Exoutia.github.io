@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on Bibek Jha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Dec 2023 12:40:37 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 27 Dec 2023 14:42:54 +0530</lastBuildDate>
     <atom:link href="https://Exoutia.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Task Scheduler</title>
+      <link>https://Exoutia.github.io/blogs/task-scheduler/</link>
+      <pubDate>Wed, 27 Dec 2023 14:42:54 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/task-scheduler/</guid>
+      <description>Today we are going to solve this leetcod/task-scheduler. This is a good problem and would need some thinking to solve it thorughly.&#xA;Heapqueue Approach In the question one had to find the least time a computer would take to complete some tasks, while completing task computer has to take some time before it can do the same task again so either do another task or do nothing for that unit of time.</description>
+    </item>
     <item>
       <title>Kth Largest Element in Array</title>
       <link>https://Exoutia.github.io/blogs/kth-largest-element-in-array/</link>

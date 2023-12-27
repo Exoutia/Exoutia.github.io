@@ -28,15 +28,15 @@
 
 
 
-<meta property="og:title" content="Kth Largest Element In a Stream (Leetcode)" />
+<meta property="og:title" content="Task Scheduler" />
 <meta property="og:description" content="Leetcode problem solution" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://Exoutia.github.io/blogs/kth-largest-element-in-a-stream/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2023-12-23T09:06:35+05:30" />
-<meta property="article:modified_time" content="2023-12-23T09:06:35+05:30" /><meta property="og:site_name" content="Exoutia" />
+<meta property="og:url" content="https://Exoutia.github.io/blogs/task-scheduler/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2023-12-27T14:42:54+05:30" />
+<meta property="article:modified_time" content="2023-12-27T14:42:54+05:30" /><meta property="og:site_name" content="Exoutia" />
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Kth Largest Element In a Stream (Leetcode)"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Task Scheduler"/>
 <meta name="twitter:description" content="Leetcode problem solution"/>
 
 
@@ -108,7 +108,7 @@
 <script defer src="/fontawesome-6/all-6.4.2.js"></script>
 
   <title>
-Kth Largest Element In a Stream (Leetcode) | Bibek Jha
+Task Scheduler | Bibek Jha
 
   </title>
 </head>
@@ -304,11 +304,11 @@ Kth Largest Element In a Stream (Leetcode) | Bibek Jha
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">Kth Largest Element In a Stream (Leetcode)</h1>
+            <h1 class="text-center mb-4">Task Scheduler</h1>
             <div class="text-center">
               Bibek Jha 
               <small>|</small>
-              Dec 23, 2023
+              Dec 27, 2023
 
               
               <span id="readingTime">
@@ -319,68 +319,56 @@ Kth Largest Element In a Stream (Leetcode) | Bibek Jha
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="/images/blogs/post1/img1.png" alt="Kth Largest Element In a Stream (Leetcode)">
+            <img class="img-fluid mx-auto d-block" src="/images/blogs/post5/img1.png" alt="Task Scheduler">
           </div>
           
           <article class="page-content  p-2">
-          <p>This is a simple software design problem in <a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/description/">LeetCode</a>.
-So according to problem we have to create a datastruccture which will return the kth_largest element every time we add element in this datastructure.</p>
-<h2 id="intutive-approach">Intutive Approach</h2>
-<p>This soltuion can be pretty intutive just insert the new element and sort the list in reverse order and return the array the <mark>K</mark> index element.</p>
-<p>The code would look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">kthLargest</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, k: int, nums: list[int]):
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>k <span style="color:#f92672">=</span> k
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>nums <span style="color:#f92672">=</span> nums
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>nums<span style="color:#f92672">.</span>append(n)
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>nums<span style="color:#f92672">.</span>sort(reverse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(self<span style="color:#f92672">.</span>nums) <span style="color:#f92672">&gt;=</span> self<span style="color:#f92672">.</span>k:
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>nums[k<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>nums[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</span></span></code></pre></div><blockquote>
-<p><strong>Time Complexity: O(nlog(n))</strong>
-<br/>
-<strong>Space Complexity: O(n)</strong></p>
-</blockquote>
-<h2 id="using-priority-queue">Using Priority Queue</h2>
-<p>Now the previous solution is fine and great but this can be improved by using Priority queue. In Priority queue removing smallest elements takes <mark>O(1)</mark> time. So if you read the question we just need to store the top <mark>K</mark> largest element every time a new element is added.</p>
-<p>Now the approach should be clear that every time new data is added we remore the smallest element until the size of heap is same as k or smaller. And finally return the last element in the array.</p>
-<p>The code look like this:</p>
+          <p>Today we are going to solve this <a href="https://leetcode.com/problems/task-scheduler/description/">leetcod/task-scheduler</a>. This is a good problem and would need some thinking to solve it thorughly.</p>
+<h2 id="heapqueue-approach">Heapqueue Approach</h2>
+<p>In the question one had to find the least time a computer would take to complete some tasks, while completing task computer has to take some time before it can do the same task again so either do another task or do nothing for that unit of time. We are asked to find the least time it would take to complete all the task.</p>
+<p>To solve this question we will take a maxHeap (max-priority-queue) why we will do this just imagine what would be best way to arrange solve the task that we can do other task while its in cooldown period obviously the one with the most count cause then after other task we can take those task not worry about wasting time while less count task is in cooldown period.</p>
+<p><img src="/images/blogs/post5/img2.png" alt="maxHeap and queue visualisation"></p>
+<p>The algorithm is pretty simple:</p>
+<ol>
+<li>Create a <mark>maxHeap</mark> from the count of tasks provided by the problem.</li>
+<li>Create a <mark>queue</mark> to store the updated count after one task is done and time when when its in cooldown period.</li>
+<li>Create the <mark>time</mark> variable to start the count when the task is being done by computer.</li>
+<li>start while loop until any one <mark>queue</mark> or <mark>maxHeap</mark> contains task to complete.</li>
+<li>inside the loop increase the <mark>time</mark> by 1.</li>
+<li>check if the <mark>maxHeap</mark> contains any task to do. If there is pop it minus one from the count and calculate the cooldown for it by adding the current <mark>time</mark> and the cooldown variable <mark>n</mark>. Then insert both variable inside the <mark>queue</mark>. I will not do it if the count of any task become 0 then it will just be skipped.</li>
+<li>Now check if <mark>queue</mark>&rsquo;s top element cooldown time is equal to the current <mark>time</mark> variable. If it is pop it and insert into the <mark>maxHeap</mark>.</li>
+<li>repeat step 4 to 7 until both <mark>queue</mark> and <mark>maxHeap</mark> is empty.</li>
+<li>When loop stops return the <mark>time</mark> variable.</li>
+</ol>
+<p>Now the code look like this. (as python heapq library only contains min-heap we i am going to treat those number in count as negative and instead of minus 1 from tasks count I will add it everything else will be same and when the task number reaches 0 will not add it inside the queue.)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter, deque
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KthLargest</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, k: int, nums: list[int]):
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Initialize the class with k and a list of integers</span>
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>k <span style="color:#f92672">=</span> k
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>heap <span style="color:#f92672">=</span> nums
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Convert the list into a min-heap using heapq.heapify</span>
-</span></span><span style="display:flex;"><span>        heapq<span style="color:#f92672">.</span>heapify(self<span style="color:#f92672">.</span>heap)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Keep only the k largest elements in the heap</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>heap) <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>k:
-</span></span><span style="display:flex;"><span>            heapq<span style="color:#f92672">.</span>heappop(self<span style="color:#f92672">.</span>heap)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Add the new element to the heap</span>
-</span></span><span style="display:flex;"><span>        heapq<span style="color:#f92672">.</span>heappush(self<span style="color:#f92672">.</span>heap, n)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Ensure that the heap maintains the k largest elements</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>heap) <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>k:
-</span></span><span style="display:flex;"><span>            heapq<span style="color:#f92672">.</span>heappop(self<span style="color:#f92672">.</span>heap)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Return the current kth largest element, which is the smallest in the heap</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>heap[<span style="color:#ae81ff">0</span>]
-</span></span></code></pre></div><blockquote>
-<p><strong>Time Complexity: O(n)</strong>
-<br/>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">leastInterval</span>(self, tasks: List[str], n: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        maxHeap <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span>i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> Counter(tasks)<span style="color:#f92672">.</span>values()]
+</span></span><span style="display:flex;"><span>        heapq<span style="color:#f92672">.</span>heapify(maxHeap)
+</span></span><span style="display:flex;"><span>        time <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        queue: deque[tuple[int, int]] <span style="color:#f92672">=</span> deque()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> maxHeap <span style="color:#f92672">or</span> queue:
+</span></span><span style="display:flex;"><span>            time <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> maxHeap:
+</span></span><span style="display:flex;"><span>                task_count <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> heapq<span style="color:#f92672">.</span>heappop(maxHeap)
+</span></span><span style="display:flex;"><span>                cooldown <span style="color:#f92672">=</span> n <span style="color:#f92672">+</span> time
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> task_count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    queue<span style="color:#f92672">.</span>append((task_count, cooldown))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> queue <span style="color:#f92672">and</span> queue[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> time:
+</span></span><span style="display:flex;"><span>                heapq<span style="color:#f92672">.</span>heappush(maxHeap, queue<span style="color:#f92672">.</span>popleft()[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> time        
+</span></span></code></pre></div><p>Now lets see whats the time complexity, for making a heap we take <mark>O(n)</mark> (<mark>n</mark> is the number of tasks) time and every other operation is <mark>O(1)</mark> (the insertion in queue)  or <mark>O(log(n))</mark> (the insertion in heap) but in worst case (where all the task is of same type) the loop has to theoritically run for <mark>O(n * m)</mark> (where <mark>m</mark> is the cooldown time). And space complexity is <mark>O(n)</mark> cause space taken by heap is <mark>O(26)</mark> (since tasks can be only upper case english alphabet letters) which corresponds to <mark>O(1)</mark> so it is not included into the space complexity and we only count the space taken by taks list.</p>
+<blockquote>
+<p><strong>Time Complexity: O(n*m)</strong>
+<br />
 <strong>Space Complexity: O(n)</strong></p>
 </blockquote>
-<p>Hope this helps you understand this prbolem.</p>
+<p>If you got any issue or just want to talk to me about me something ping me up in my socials.</p>
 
           </article>
         </div>
@@ -395,8 +383,7 @@ So according to problem we have to create a datastruccture which will return the
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#intutive-approach">Intutive Approach</a></li>
-    <li><a href="#using-priority-queue">Using Priority Queue</a></li>
+    <li><a href="#heapqueue-approach">Heapqueue Approach</a></li>
   </ul>
 </nav>
               </div>
@@ -410,9 +397,11 @@ So according to problem we have to create a datastruccture which will return the
               
               <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/leetcode" target="_blank">leetcode</a></li>
               
-              <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/easy" target="_blank">easy</a></li>
-              
               <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/heapqueue" target="_blank">heapqueue</a></li>
+              
+              <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/queue" target="_blank">queue</a></li>
+              
+              <li class="list-inline-item"><a href="https://Exoutia.github.io/tags/medium" target="_blank">medium</a></li>
               
             </ul>
           </aside>
@@ -424,17 +413,17 @@ So according to problem we have to create a datastruccture which will return the
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=Kth%20Largest%20Element%20In%20a%20Stream%20%28Leetcode%29&url=https%3a%2f%2fExoutia.github.io%2fblogs%2fkth-largest-element-in-a-stream%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=Task%20Scheduler&url=https%3a%2f%2fExoutia.github.io%2fblogs%2ftask-scheduler%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Kth%20Largest%20Element%20In%20a%20Stream%20%28Leetcode%29: https%3a%2f%2fExoutia.github.io%2fblogs%2fkth-largest-element-in-a-stream%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Task%20Scheduler: https%3a%2f%2fExoutia.github.io%2fblogs%2ftask-scheduler%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Kth%20Largest%20Element%20In%20a%20Stream%20%28Leetcode%29&amp;body=Check%20out%20this%20site https%3a%2f%2fExoutia.github.io%2fblogs%2fkth-largest-element-in-a-stream%2f'>
+                  <a target="_blank" href='mailto:?subject=Task%20Scheduler&amp;body=Check%20out%20this%20site https%3a%2f%2fExoutia.github.io%2fblogs%2ftask-scheduler%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
