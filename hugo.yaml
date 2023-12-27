@@ -256,6 +256,18 @@ params:
           - icon: fab fa-github
             url: https://github.com/Exoutia/dsa_pi
 
+      - title: Blog-Pic-Generator
+        content: A web application to create dynamic images for my blogs.
+        image: /images/projects/Blog-Pic-Generator/img1.png
+        badges:
+          - "Python"
+          - "Flask"
+          - "HTML"
+          - "CSS"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Exoutia/blog-pic-generator
+
   #Contact
   contact:
     enable: true
