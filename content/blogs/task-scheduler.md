@@ -60,4 +60,4 @@ Now lets see whats the time complexity, for making a heap we take <mark>O(n)</ma
 <br />
 > **Space Complexity: O(n)**
 
-If you got any issue or just want to talk to me about me something ping me up in my socials.
+If you got any issue or just want to talk to me about something ping me up in my socials.

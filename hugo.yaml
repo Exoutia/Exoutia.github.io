@@ -14,7 +14,7 @@ outputs:
 
 Paginate: 3
 enableRobotsTXT: true
-# disqusShortname: your-disqus-shortname
+disqusShortname: exoutia-github-io
 # googleAnalytics: G-MEASUREMENT_ID
 
 markup:
@@ -320,6 +320,6 @@ params:
     articleList: "Jan 2, 2006"
     articleRecent: "Jan 2, 2006"
 
-  # customScripts: -| # You can add custom scripts which will be added before </body> tag
-  #  <script type="text/javascript"><!-- any script here --></script
+  customScripts: |- # You can add custom scripts which will be added before </body> tag
+    <script id="dsq-count-scr" src="//exoutia-github-io.disqus.com/count.js" async></script>
 
