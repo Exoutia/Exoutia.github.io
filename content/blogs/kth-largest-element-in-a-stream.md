@@ -1,11 +1,11 @@
 ---
-title: "Kth Largest Element In a Stream (Leetcode)"
+title: "Kth Largest Element In a Stream"
 date: 2023-12-23T09:06:35+05:30
 author: "Bibek Jha"
 image: /images/blogs/post1/img1.png
 draft: false
 tags: ['leetcode', 'easy', 'heapqueue']
-description: 'Leetcode problem solution'
+description: 'Leetcode problem solution for problem number: 703'
 ---
 
 This is a simple software design problem in [LeetCode](https://leetcode.com/problems/kth-largest-element-in-a-stream/description/).

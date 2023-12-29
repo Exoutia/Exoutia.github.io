@@ -5,7 +5,7 @@ author: "Bibek Jha"
 image: /images/blogs/post3/img1.png
 draft: false
 tags: ['leetcode', 'medium', 'heapqueue']
-description: 'Leetcode problem solution'
+description: 'Leetcode problem solution for problem number: 973'
 ---
 
 Today we discusses the solution to the [LeetCode problem](https://leetcode.com/problems/k-closest-points-to-origin/) of finding the Kth closest points to the origin.

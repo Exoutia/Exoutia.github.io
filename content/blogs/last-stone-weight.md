@@ -5,7 +5,7 @@ draft: false
 author: "Bibek Jha"
 image: /images/blogs/post2/img1.png
 tags: ["leetcode", "easy", "heapqueue"]
-description: "Leetcode problem solution"
+description: 'Leetcode problem solution for problem number: 1046'
 ---
 
 Link to the question: [LeetCode/Last-stone-weight](https://leetcode.com/problems/last-stone-weight/description/)

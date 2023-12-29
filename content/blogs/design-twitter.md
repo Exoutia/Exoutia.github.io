@@ -4,7 +4,7 @@ date: 2023-12-28T14:40:54+05:30
 draft: false
 author: 'Bibek Jha'
 image: /images/blogs/post6/img1.png
-description: 'Leetcode problem solution'
+description: 'Leetcode problem solution for problem number: 355'
 tags: ['leetcode', 'hashmap', 'heapqueue', 'medium', 'queue']
 ---
 The link to question is [lettcode/design-twitter](https://leetcode.com/problems/design-twitter/description/). 

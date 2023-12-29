@@ -4,7 +4,7 @@ date: 2023-12-26T12:40:37+05:30
 draft: false
 author: "Bibek Jha"
 image: /images/blogs/post4/img1.png
-description: "Leetcode problem solution"
+description: 'Leetcode problem solution for problem number: 215'
 tags: ["leetcode", "heapqueue", "medium"]
 ---
 
