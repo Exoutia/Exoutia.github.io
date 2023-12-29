@@ -6,8 +6,15 @@
     <description>Recent content in leetcode on Bibek Jha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Dec 2023 14:40:54 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2023 10:53:07 +0530</lastBuildDate>
     <atom:link href="https://Exoutia.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Find Median From Data Stream</title>
+      <link>https://Exoutia.github.io/blogs/find-median-from-data-stream/</link>
+      <pubDate>Fri, 29 Dec 2023 10:53:07 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/find-median-from-data-stream/</guid>
+      <description>The link to problem is Leetcode/find-median-from-data-stream&#xA;This is hard problem but it is somewhat easy compared to some other hard problems. It is only easy if you know data-structures well enough. In this problem you are asked to create class which has two methods one for adding a integer, other function is used to get median in the ordered list made up of elements added previously in the list.&#xA;Heapqueue Approach Now this problem is hard cause we have to get median in O(1) constant complexity.</description>
+    </item>
     <item>
       <title>Design Twitter</title>
       <link>https://Exoutia.github.io/blogs/design-twitter/</link>
@@ -44,7 +51,7 @@
       <description>Link to the question: LeetCode/Last-stone-weight&#xA;In this problem, you are given an array of integers representing the weights of stones. The goal is to simulate a game where, at each turn, the two heaviest stones are selected and either both are destroyed (if they have the same weight) or the lighter stone is destroyed, and the heavier one&amp;rsquo;s weight is updated. The process repeats until there is at most one stone left, and you need to return the weight of the last remaining stone or 0 if there are no stones left.</description>
     </item>
     <item>
-      <title>Kth Largest Element In a Stream (Leetcode)</title>
+      <title>Kth Largest Element In a Stream</title>
       <link>https://Exoutia.github.io/blogs/kth-largest-element-in-a-stream/</link>
       <pubDate>Sat, 23 Dec 2023 09:06:35 +0530</pubDate>
       <guid>https://Exoutia.github.io/blogs/kth-largest-element-in-a-stream/</guid>

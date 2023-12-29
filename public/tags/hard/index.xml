@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hard on Bibek Jha</title>
+    <link>https://Exoutia.github.io/tags/hard/</link>
+    <description>Recent content in hard on Bibek Jha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Dec 2023 10:53:07 +0530</lastBuildDate>
+    <atom:link href="https://Exoutia.github.io/tags/hard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Find Median From Data Stream</title>
+      <link>https://Exoutia.github.io/blogs/find-median-from-data-stream/</link>
+      <pubDate>Fri, 29 Dec 2023 10:53:07 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/find-median-from-data-stream/</guid>
+      <description>The link to problem is Leetcode/find-median-from-data-stream&#xA;This is hard problem but it is somewhat easy compared to some other hard problems. It is only easy if you know data-structures well enough. In this problem you are asked to create class which has two methods one for adding a integer, other function is used to get median in the ordered list made up of elements added previously in the list.&#xA;Heapqueue Approach Now this problem is hard cause we have to get median in O(1) constant complexity.</description>
+    </item>
+  </channel>
+</rss>
