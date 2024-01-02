@@ -2,11 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://Exoutia.github.io/tags/backtracking/</loc>
+    <lastmod>2024-01-02T20:54:43+05:30</lastmod>
+  </url><url>
     <loc>https://Exoutia.github.io/</loc>
-    <lastmod>2023-12-29T10:53:07+05:30</lastmod>
+    <lastmod>2024-01-02T20:54:43+05:30</lastmod>
   </url><url>
     <loc>https://Exoutia.github.io/blogs/</loc>
-    <lastmod>2023-12-29T10:53:07+05:30</lastmod>
+    <lastmod>2024-01-02T20:54:43+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/tags/leetcode/</loc>
+    <lastmod>2024-01-02T20:54:43+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/tags/medium/</loc>
+    <lastmod>2024-01-02T20:54:43+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/blogs/subset-2/</loc>
+    <lastmod>2024-01-02T20:54:43+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/tags/</loc>
+    <lastmod>2024-01-02T20:54:43+05:30</lastmod>
   </url><url>
     <loc>https://Exoutia.github.io/blogs/find-median-from-data-stream/</loc>
     <lastmod>2023-12-29T10:53:07+05:30</lastmod>
@@ -17,19 +32,10 @@
     <loc>https://Exoutia.github.io/tags/heapqueue/</loc>
     <lastmod>2023-12-29T10:53:07+05:30</lastmod>
   </url><url>
-    <loc>https://Exoutia.github.io/tags/leetcode/</loc>
-    <lastmod>2023-12-29T10:53:07+05:30</lastmod>
-  </url><url>
-    <loc>https://Exoutia.github.io/tags/</loc>
-    <lastmod>2023-12-29T10:53:07+05:30</lastmod>
-  </url><url>
     <loc>https://Exoutia.github.io/blogs/design-twitter/</loc>
     <lastmod>2023-12-28T14:40:54+05:30</lastmod>
   </url><url>
     <loc>https://Exoutia.github.io/tags/hashmap/</loc>
-    <lastmod>2023-12-28T14:40:54+05:30</lastmod>
-  </url><url>
-    <loc>https://Exoutia.github.io/tags/medium/</loc>
     <lastmod>2023-12-28T14:40:54+05:30</lastmod>
   </url><url>
     <loc>https://Exoutia.github.io/tags/queue/</loc>

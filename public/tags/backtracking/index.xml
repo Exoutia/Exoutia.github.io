@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backtracking on Bibek Jha</title>
+    <link>https://Exoutia.github.io/tags/backtracking/</link>
+    <description>Recent content in backtracking on Bibek Jha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jan 2024 20:54:43 +0530</lastBuildDate>
+    <atom:link href="https://Exoutia.github.io/tags/backtracking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Subset 2</title>
+      <link>https://Exoutia.github.io/blogs/subset-2/</link>
+      <pubDate>Tue, 02 Jan 2024 20:54:43 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/subset-2/</guid>
+      <description>Today I solved this leetcode problem leetcode/subsets-ii, before solving this question one should solve the leetcode/subset.&#xA;Backtracking In this problem we need to find the powerset of the list of number given. The catch is that the list of numbers can contain the duplicates but the ans set shouldn&amp;rsquo;t contain any duplicates. To solve the problem we can use backtrackint where at every step we either include the number or not.</description>
+    </item>
+  </channel>
+</rss>
