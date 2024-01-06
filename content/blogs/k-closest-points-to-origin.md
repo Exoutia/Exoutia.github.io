@@ -5,6 +5,7 @@ author: "Bibek Jha"
 image: /images/blogs/post3/img1.png
 draft: false
 tags: ['leetcode', 'medium', 'heapqueue']
+id: 3
 description: 'Leetcode problem solution for problem number: 973'
 ---
 

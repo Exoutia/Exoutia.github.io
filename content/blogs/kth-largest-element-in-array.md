@@ -5,6 +5,7 @@ draft: false
 author: "Bibek Jha"
 image: /images/blogs/post4/img1.png
 description: 'Leetcode problem solution for problem number: 215'
+id: 4
 tags: ["leetcode", "heapqueue", "medium"]
 ---
 

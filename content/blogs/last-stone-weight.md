@@ -5,6 +5,7 @@ draft: false
 author: "Bibek Jha"
 image: /images/blogs/post2/img1.png
 tags: ["leetcode", "easy", "heapqueue"]
+id: 2
 description: 'Leetcode problem solution for problem number: 1046'
 ---
 

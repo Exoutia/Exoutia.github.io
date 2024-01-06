@@ -5,6 +5,7 @@ draft: false
 author: 'Bibek Jha'
 image: /images/blogs/post8/img1.png
 description: 'Leetcode problem solution for problem number: 90'
+id: 8
 tags: ['backtracking', 'medium', 'leetcode']
 ---
 Today I solved this leetcode problem [leetcode/subsets-ii](https://leetcode.com/problems/subsets-ii/description/), before solving this question one should solve the [leetcode/subset](https://leetcode.com/problems/subsets/).

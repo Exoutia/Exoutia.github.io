@@ -4,6 +4,7 @@ date: 2023-12-23T09:06:35+05:30
 author: "Bibek Jha"
 image: /images/blogs/post1/img1.png
 draft: false
+id: 1
 tags: ['leetcode', 'easy', 'heapqueue']
 description: 'Leetcode problem solution for problem number: 703'
 ---

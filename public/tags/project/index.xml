@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project on Bibek Jha</title>
+    <link>https://Exoutia.github.io/tags/project/</link>
+    <description>Recent content in project on Bibek Jha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jan 2024 20:52:00 +0530</lastBuildDate>
+    <atom:link href="https://Exoutia.github.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog Pic Generator</title>
+      <link>https://Exoutia.github.io/blogs/blog-pic-generator/</link>
+      <pubDate>Sat, 06 Jan 2024 20:52:00 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/blog-pic-generator/</guid>
+      <description>Blog Pic Generator If you read my blogs about solving question you will see a similar pic for my blog at top of my page. This pic is generated using a web-application that I have made using Python.&#xA;Technologies I have made this web application using Python framework Flask, and Jinja templates.&#xA;How Does this work. In this application I have made a form that will take the information that I want to show in the picture and optionaly a picture.</description>
+    </item>
+  </channel>
+</rss>

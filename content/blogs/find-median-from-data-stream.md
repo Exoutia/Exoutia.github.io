@@ -5,6 +5,7 @@ draft: false
 author: 'Bibek Jha'
 image: /images/blogs/post7/img1.png
 description: 'Leetcode problem solution for problem number: 295'
+id: 7
 tags: ['leetcode', 'heapqueue', 'hard']
 ---
 The link to problem is [Leetcode/find-median-from-data-stream](https://leetcode.com/problems/find-median-from-data-stream/description/) 
