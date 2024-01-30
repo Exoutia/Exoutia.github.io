@@ -2,13 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://Exoutia.github.io/tags/backtracking/</loc>
-    <lastmod>2024-01-07T07:56:50+05:30</lastmod>
-  </url><url>
     <loc>https://Exoutia.github.io/</loc>
-    <lastmod>2024-01-07T07:56:50+05:30</lastmod>
+    <lastmod>2024-01-30T20:11:00+05:30</lastmod>
   </url><url>
     <loc>https://Exoutia.github.io/blogs/</loc>
+    <lastmod>2024-01-30T20:11:00+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/tags/data-science/</loc>
+    <lastmod>2024-01-30T20:11:00+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/tags/learning/</loc>
+    <lastmod>2024-01-30T20:11:00+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/blogs/setting-a-goal-to-learn-data-science-part-0/</loc>
+    <lastmod>2024-01-30T20:11:00+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/tags/</loc>
+    <lastmod>2024-01-30T20:11:00+05:30</lastmod>
+  </url><url>
+    <loc>https://Exoutia.github.io/tags/backtracking/</loc>
     <lastmod>2024-01-07T07:56:50+05:30</lastmod>
   </url><url>
     <loc>https://Exoutia.github.io/tags/hard/</loc>
@@ -18,9 +30,6 @@
     <lastmod>2024-01-07T07:56:50+05:30</lastmod>
   </url><url>
     <loc>https://Exoutia.github.io/blogs/n-queens/</loc>
-    <lastmod>2024-01-07T07:56:50+05:30</lastmod>
-  </url><url>
-    <loc>https://Exoutia.github.io/tags/</loc>
     <lastmod>2024-01-07T07:56:50+05:30</lastmod>
   </url><url>
     <loc>https://Exoutia.github.io/blogs/blog-pic-generator/</loc>
