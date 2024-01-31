@@ -6,8 +6,15 @@
     <description>Recent content in python on Bibek Jha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jan 2024 20:52:00 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jan 2024 17:54:28 +0530</lastBuildDate>
     <atom:link href="https://Exoutia.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Is Love</title>
+      <link>https://Exoutia.github.io/blogs/python-is-love/</link>
+      <pubDate>Wed, 31 Jan 2024 17:54:28 +0530</pubDate>
+      <guid>https://Exoutia.github.io/blogs/python-is-love/</guid>
+      <description>Today I am going to talk about Python language. If you follow me you will know that I really love this language from web development to solving dsa problems. It is my first real language that I learned on my own (my first programming language is c but I just copied code from friend to pass the class in university). From the moment I started learning I am in love with this language, I know it has some problems like it is somewhat slow compared to other compiled language and etc but let me tell you for sure if you can do python there is far more plus than downside.</description>
+    </item>
     <item>
       <title>Blog Pic Generator</title>
       <link>https://Exoutia.github.io/blogs/blog-pic-generator/</link>
