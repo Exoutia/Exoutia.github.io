@@ -1,7 +1,7 @@
 ---
 title: 'Setting a Goal to Learn Data Science (Part 0)'
 date: 2024-01-30T20:11:00+05:30
-draft: false
+draft: true
 author: 'Bibek Jha'
 image: /images/blogs/post15/img1.png
 description: 'This is my first blog to record my journy in learning data science'

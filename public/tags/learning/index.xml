@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>learning on Bibek Jha</title>
+    <title>Learning on Bibek Jha</title>
     <link>https://Exoutia.github.io/tags/learning/</link>
-    <description>Recent content in learning on Bibek Jha</description>
+    <description>Recent content in Learning on Bibek Jha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Jan 2024 17:54:28 +0530</lastBuildDate>
@@ -14,13 +14,6 @@
       <pubDate>Wed, 31 Jan 2024 17:54:28 +0530</pubDate>
       <guid>https://Exoutia.github.io/blogs/python-is-love/</guid>
       <description>Today I am going to talk about Python language. If you follow me you will know that I really love this language from web development to solving dsa problems. It is my first real language that I learned on my own (my first programming language is c but I just copied code from friend to pass the class in university). From the moment I started learning I am in love with this language, I know it has some problems like it is somewhat slow compared to other compiled language and etc but let me tell you for sure if you can do python there is far more plus than downside.</description>
-    </item>
-    <item>
-      <title>Setting a Goal to Learn Data Science (Part 0)</title>
-      <link>https://Exoutia.github.io/blogs/setting-a-goal-to-learn-data-science-part-0/</link>
-      <pubDate>Tue, 30 Jan 2024 20:11:00 +0530</pubDate>
-      <guid>https://Exoutia.github.io/blogs/setting-a-goal-to-learn-data-science-part-0/</guid>
-      <description>I have always been interested in Data and how one can gleam so many interesting information about the thing that data is about. My college this semester is teaching Big Data so I wanted to learn data science in side with my college studies. Now&amp;rsquo;s the best time to learn about this.&#xA;While learning I will try to take notes according to a book I am reading on building second brain and publish a weekly blog about the things I have learned that week.</description>
     </item>
   </channel>
 </rss>
