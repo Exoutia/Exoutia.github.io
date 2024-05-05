@@ -167,6 +167,8 @@ params:
         - "HTML"
         - "JavaScript"
         - "SQL"
+        - "Postgresql"
+        - "Java"
         - "Git and GitHub"
         - "Arduino and IoT"
 
