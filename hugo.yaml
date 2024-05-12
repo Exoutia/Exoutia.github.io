@@ -247,6 +247,20 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/exoutia
+      
+      - title: Fun Web Projects
+        content: Collections of simple project made using HTML, CSS and Javascript.
+        image: /images/projects/fun-web-projects/banner.png
+        featured:
+          name: Demo
+          link: https://exoutia.github.io/30_days_30_projects_javascript/
+        badges:
+          - "HTML"
+          - "CSS"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/exoutia/fun-web-projects
 
       - title: DSA_pi
         content: A REST API created using FastApi in python.
