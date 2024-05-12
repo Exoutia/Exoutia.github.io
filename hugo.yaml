@@ -253,7 +253,7 @@ params:
         image: /images/projects/fun-web-projects/banner.png
         featured:
           name: Demo
-          link: https://exoutia.github.io/30_days_30_projects_javascript/
+          link: https://exoutia.github.io/fun-web-projects/
         badges:
           - "HTML"
           - "CSS"
