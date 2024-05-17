@@ -214,6 +214,10 @@ params:
         url: https://www.linkedin.com/posts/bibek-jha-aa288a202_today-i-want-to-share-my-achievement-of-winning-activity-7057191004013010944-E67_?utm_source=share&utm_medium=member_android
         image: /images/wavicle.png
       
+      - title: 2nd Prize Winner in Wavicle 5.0
+        content: My final year project won the 2nd prize in inter-college competition held on 14th May 2024. My project was a ML based IOT Device to automate the process of maintaining a industrial level GreenHose.
+        url: https://www.linkedin.com/posts/bibek-jha-aa288a202_techfest-wavicle5-teamachievement-activity-7197081010746843136-pnIP?utm_source=share&utm_medium=member_desktop
+        image: /images/wavicle_5_2nd.png
 
   # projects
   projects:
